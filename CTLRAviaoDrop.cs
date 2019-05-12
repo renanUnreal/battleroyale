@@ -25,21 +25,23 @@ public class CTLRAviaoDrop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        tempoSpawn += Time.deltaTime;
+      
         SpawnAleatorio = Random.value;
 
         // Esquema de Spawn de Avioes
-
-        if (tempoSpawn > 10)
+        if (!GameObject.FindWithTag("AviaoAirDrop"))
+        {
+              tempoSpawn += Time.deltaTime;
+            if (tempoSpawn > 10)
         {
 
-            if (!GameObject.FindWithTag("AviaoAirDrop")) {
+            
 
                 // condicao 1
                 if (SpawnAleatorio >= 0 && SpawnAleatorio < 0.16)
                 {
                     Instantiate(Aviao, SpawnSE.position, SpawnSE.rotation);
-
+                   
                     
                 }
 
@@ -47,8 +49,8 @@ public class CTLRAviaoDrop : MonoBehaviour
                 if (SpawnAleatorio >= 0.16 && SpawnAleatorio < 0.32)
                 {
                     Instantiate(Aviao, SpawnNE.position, SpawnNE.rotation);
-                    
 
+                  
                 }
 
                 // condicao 3
@@ -56,7 +58,7 @@ public class CTLRAviaoDrop : MonoBehaviour
                 {
                     Instantiate(Aviao, SpawnSW.position, SpawnSW.rotation);
 
-                  
+                   
 
                 }
 
@@ -64,32 +66,32 @@ public class CTLRAviaoDrop : MonoBehaviour
                 if (SpawnAleatorio >= 0.48 && SpawnAleatorio < 0.64)
                 {
                     Instantiate(Aviao, SpawnNW.position, SpawnNW.rotation);
-                    
 
+                   
                 }
 
                 // condicao 5
                 if (SpawnAleatorio >= 0.64 && SpawnAleatorio < 0.80)
                 {
                     Instantiate(Aviao, SpawnW.position, SpawnW.rotation);
-                    
 
+                    
                 }
 
                 // condicao 6
                 if (SpawnAleatorio >= 0.80 && SpawnAleatorio < 1)
                 {
                     Instantiate(Aviao, SpawnE.position, SpawnE.rotation);
-
                     
-                }
 
-            } }
-        if (tempoSpawn > 10.1)
-        {
-            tempoSpawn = 0;
-            
+                }
+                tempoSpawn = 0;
+            }
+           
         }
+
+
     }
+   
     
 }
