@@ -30,7 +30,7 @@ public class CTLRAviaoDrop : MonoBehaviour
 
         // Esquema de Spawn de Avioes
 
-        if (tempoSpawn > 30)
+        if (tempoSpawn > 10)
         {
 
             if (!GameObject.FindWithTag("AviaoAirDrop")) {
