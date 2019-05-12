@@ -15,11 +15,10 @@ public class CTLRAviaoDrop : MonoBehaviour
     public float tempoSpawn;
     public float SpawnAleatorio;
     public GameObject Aviao;
-    public bool CTRLSpawn;
     void Start()
     {
         tempoSpawn = 0;
-        CTRLSpawn = true;
+       
     }
 
     // Update is called once per frame
