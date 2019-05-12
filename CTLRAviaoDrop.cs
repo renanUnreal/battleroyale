@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -30,65 +30,65 @@ public class CTLRAviaoDrop : MonoBehaviour
 
         // Esquema de Spawn de Avioes
 
-        if (CTRLSpawn)
+        if (tempoSpawn > 30)
         {
 
-           
+            if (!GameObject.FindWithTag("AviaoAirDrop")) {
 
-            // condicao 1
-            if (SpawnAleatorio >= 0 && SpawnAleatorio < 0.16)
-            {
-                Instantiate(Aviao, SpawnSE.position, SpawnSE.rotation);
+                // condicao 1
+                if (SpawnAleatorio >= 0 && SpawnAleatorio < 0.16)
+                {
+                    Instantiate(Aviao, SpawnSE.position, SpawnSE.rotation);
 
-                CTRLSpawn = false;
-            }
+                    
+                }
 
-            // condicao 2
-            if (SpawnAleatorio >= 0.16 && SpawnAleatorio < 0.32)
-            {
-                Instantiate(Aviao, SpawnNE.position, SpawnNE.rotation);
-                CTRLSpawn = false;
+                // condicao 2
+                if (SpawnAleatorio >= 0.16 && SpawnAleatorio < 0.32)
+                {
+                    Instantiate(Aviao, SpawnNE.position, SpawnNE.rotation);
+                    
 
-            }
+                }
 
-            // condicao 3
-            if (SpawnAleatorio >= 0.32 && SpawnAleatorio < 0.48)
-            {
-                Instantiate(Aviao, SpawnSW.position, SpawnSW.rotation);
+                // condicao 3
+                if (SpawnAleatorio >= 0.32 && SpawnAleatorio < 0.48)
+                {
+                    Instantiate(Aviao, SpawnSW.position, SpawnSW.rotation);
 
-                CTRLSpawn = false;
+                  
 
-            }
+                }
 
-            // condicao 4
-            if (SpawnAleatorio >= 0.48 && SpawnAleatorio < 0.64)
-            {
-                Instantiate(Aviao, SpawnNW.position, SpawnNW.rotation);
-                CTRLSpawn = false;
+                // condicao 4
+                if (SpawnAleatorio >= 0.48 && SpawnAleatorio < 0.64)
+                {
+                    Instantiate(Aviao, SpawnNW.position, SpawnNW.rotation);
+                    
 
-            }
+                }
 
-            // condicao 5
-            if (SpawnAleatorio >= 0.64 && SpawnAleatorio < 0.80)
-            {
-                Instantiate(Aviao, SpawnW.position, SpawnW.rotation);
-                CTRLSpawn = false;
+                // condicao 5
+                if (SpawnAleatorio >= 0.64 && SpawnAleatorio < 0.80)
+                {
+                    Instantiate(Aviao, SpawnW.position, SpawnW.rotation);
+                    
 
-            }
+                }
 
-            // condicao 6
-            if (SpawnAleatorio >= 0.80 && SpawnAleatorio < 1)
-            {
-                Instantiate(Aviao, SpawnE.position, SpawnE.rotation);
+                // condicao 6
+                if (SpawnAleatorio >= 0.80 && SpawnAleatorio < 1)
+                {
+                    Instantiate(Aviao, SpawnE.position, SpawnE.rotation);
 
-                CTRLSpawn = false;
-            }
+                    
+                }
 
-        }
+            } }
         if (tempoSpawn > 10.1)
         {
             tempoSpawn = 0;
-            CTRLSpawn = true;
+            
         }
     }
     
