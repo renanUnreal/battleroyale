@@ -39,7 +39,10 @@ public class SafeZone : MonoBehaviour
             posiCentroSZ.z = -posiCentroSZ.z;
         }
 
+        // sempre deixar o eixo Y em Zero
 
+        posiBorda.y = 0;
+        posiCentroSZ.y = 0;
 
         // pegando a distancia do centro em relação a borda da safezone ponto (A) e ponto (B)
         DistanciaRelCentroSZ = Vector3.Distance(posiBorda, posiCentroSZ);
